@@ -1,0 +1,24 @@
+﻿
+{/* TODO: Owner to write full article */}
+
+Building GHData Market surfaced challenges around payments, trust and distribution that no amount
+of planning fully prepared for.
+
+A marketplace is mostly not a storefront. The storefront is the small part. The substantive product
+is the transaction layer: reconciliation between payment providers, supplier APIs that occasionally
+do not respond, inventory that must never be sold twice, and an agent network whose trust model the
+platform has to encode carefully.
+
+## Payments are a state machine
+
+Every payment interaction is a conversation with an external system you do not control. The lesson
+I keep re-learning: model every transaction as an explicit state machine, persist it, and make
+retrying safe. Edge cases are not the tail of this system â€” they are a significant part of the
+everyday operational load.
+
+## Distribution is architecture too
+
+An agent-based model is not just a go-to-market choice; it shapes the data model, the permission
+system and the support burden. When you design the marketplace, you are designing the sales network.
+
+{/* TODO: Owner to expand with specific incidents and lessons from the GHData Market build. */}

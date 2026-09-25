@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* Design tokens (Section 8). @theme emits these as :root custom properties,
+   so var(--color-bg) etc. are available for raw CSS as well as utilities.
+   --color-text-secondary and --color-text-muted are lightened slightly from
+   the brief's originals to guarantee 4.5:1 body-text contrast on dark surfaces
+   (permitted by Section C). */
+@theme {
+  --color-bg: #0B0D0F;
+  --color-surface-1: #12161A;
+  --color-surface-2: #171C21;
+  --color-surface-3: #1D2329;
+
+  --color-text-primary: #F5F5F0;
+  --color-text-secondary: #B4BAC1;
+  --color-text-muted: #8A9199;
+
+  --color-border: #252B31;
+  --color-border-subtle: #1D2329;
+
+  --color-accent: #E09B3D;
+  --color-accent-hover: #C9872A;
+  --color-accent-muted: rgba(224, 155, 61, 0.12);
+
+  --color-success: #4CAF7D;
+  --color-error: #E05555;
+}
+
+/* Fonts are provided by next/font via the class variables on <html>.
+   `inline` keeps the utility referencing the live font variable instead of
+   emitting a circular :root declaration. */
+@theme inline {
+  --font-heading: var(--font-heading), system-ui, sans-serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-accent-muted);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Editorial type scale helpers (Section 9) */
+@utility text-hero {
+  font-family: var(--font-heading);
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+@utility text-section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+@utility text-lead {
+  font-size: clamp(1.25rem, 2vw, 1.375rem);
+  line-height: 1.6;
+}
+
+@utility text-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+/* CV print rules (Section 24) */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .print-doc * {
+    color: #111111 !important;
+    background: #ffffff !important;
+    border-color: #d0d0d0 !important;
+    box-shadow: none !important;
+  }
+}
