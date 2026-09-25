@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/Button'
 const panels = [
   { name: 'EduIntel', category: 'Academic data visualization', accent: 'line', z: 3, opacity: 1 },
   { name: 'GHData', category: 'Market', accent: 'dot', z: 4, opacity: 1 },
-  { name: 'EduSankofa', category: 'School Management', accent: 'line', z: 2, opacity: 0.85 },
+  { name: 'Kensa SMS', category: 'School Management', accent: 'line', z: 2, opacity: 0.85 },
   { name: 'Reddy', category: 'HMS', accent: 'dot', z: 1, opacity: 0.6 },
 ]
 
