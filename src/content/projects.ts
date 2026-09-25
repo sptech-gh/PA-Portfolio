@@ -34,13 +34,13 @@ export const projects: Project[] = [
   },
 
   {
-    slug: 'edusankofa',
-    title: 'EduSankofa',
+    slug: 'kensa-sms',
+    title: 'Kensa SMS',
     category: 'Education Technology · School Management',
     shortDescription:
       'A school management platform built around the operational realities of private basic schools — students, staff, finance and parent communication in one system.',
     fullDescription:
-      'EduSankofa is a school management platform designed specifically for private basic schools. It consolidates student records, teacher workflows, fee management and parent communication into a single usable system — designed around how these schools actually run, not how enterprise software assumes they do.',
+      'Kensa SMS is a school management platform designed specifically for private basic schools. It consolidates student records, teacher workflows, fee management and parent communication into a single usable system — designed around how these schools actually run, not how enterprise software assumes they do.',
     challenge:
       'Private basic schools manage critical administrative processes across disconnected spreadsheets, paper records and manual systems. This creates data gaps, fee tracking errors and communication failures with parents that accumulate into real operational problems.',
     approach:
@@ -49,7 +49,7 @@ export const projects: Project[] = [
       'A web-based platform covering student management, term-based fee tracking, teacher administration, a parent portal and academic reporting.',
     role: ['Product Strategy', 'UX', 'Frontend', 'Backend', 'Database'],
     outcome:
-      'A functional school management platform in active development, replacing manual administrative processes with a structured digital system suited to the target school context.',
+      'A live school management platform replacing manual administrative processes with a structured digital system suited to the target school context.',
     technologies: [
       { name: 'Next.js', category: 'frontend' },
       { name: 'TypeScript', category: 'frontend' },
@@ -57,9 +57,9 @@ export const projects: Project[] = [
       { name: 'File-backed data', category: 'database' },
     ],
     featured: true,
-    status: 'in-development',
-    coverImage: undefined, // TODO: Owner to supply — /images/projects/edusankofa-cover.jpg
-    externalUrl: undefined, // TODO: Owner to supply live URL when ready
+    status: 'live',
+    coverImage: undefined, // TODO: Owner to supply — /images/projects/kensa-sms-cover.jpg
+    externalUrl: 'https://kensa-sms.vercel.app/login',
     year: 2024,
   },
 
@@ -149,7 +149,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'live',
     coverImage: undefined,
-    externalUrl: 'http://commaxhealthcare.com/',
+    externalUrl: 'https://commaxhealthcare.com/',
     year: 2023,
   },
 
@@ -201,30 +201,6 @@ export const projects: Project[] = [
     coverImage: undefined,
     externalUrl: 'https://agribiz.africa',
     year: 2023,
-  },
-
-  {
-    slug: 'kensa-sms',
-    title: 'Kensa SMS',
-    category: 'Education Technology · School Management',
-    shortDescription:
-      'A school management system providing schools with tools to manage students, staff, academics and administration from one platform.',
-    fullDescription:
-      'Kensa SMS is a school management system built to support schools in managing their day-to-day operations — from student records and academic tracking to staff management and administrative processes.',
-    challenge:
-      'Schools needed a practical, accessible management system that worked within their operational constraints and could be adopted without extensive training or infrastructure changes.',
-    approach:
-      'Built a focused, task-oriented system prioritising the workflows that school staff actually spend time on — student registration, attendance, academic records and communication.',
-    solution:
-      'A web-based school management system covering the core administrative and academic management needs of a school.',
-    role: ['Product Strategy', 'Full Stack Development', 'Deployment'],
-    outcome: 'A functional school management system available for school use.',
-    technologies: [{ name: 'Web technologies', category: 'frontend' }],
-    featured: false,
-    status: 'live',
-    coverImage: undefined,
-    externalUrl: 'https://kensa-sms.vercel.app/',
-    year: 2024,
   },
 ]
 

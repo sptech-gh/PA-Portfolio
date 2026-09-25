@@ -1,4 +1,4 @@
-# PORTFOLIO DATA SUPPLEMENT
+﻿# PORTFOLIO DATA SUPPLEMENT
 ## Real Owner Data — Apply on Top of Master Build Prompt
 
 > **For the AI agent:** This file overrides every `[PLACEHOLDER]` and `// TODO:` marked item in `PORTFOLIO_BUILD_PROMPT.md`. Apply all values here exactly as written. Do not invent data. Do not omit fields. Where a live URL is provided, use it as `externalUrl` on the relevant project or product.
@@ -109,13 +109,13 @@ export const projects: Project[] = [
   },
 
   {
-    slug: 'edusankofa',
-    title: 'EduSankofa',
+    slug: 'kensa-sms',
+    title: 'Kensa SMS',
     category: 'Education Technology · School Management',
     shortDescription:
       'A school management platform built around the operational realities of private basic schools — students, staff, finance and parent communication in one system.',
     fullDescription:
-      'EduSankofa is a school management platform designed specifically for private basic schools. It consolidates student records, teacher workflows, fee management and parent communication into a single usable system — designed around how these schools actually run, not how enterprise software assumes they do.',
+      'Kensa SMS is a school management platform designed specifically for private basic schools. It consolidates student records, teacher workflows, fee management and parent communication into a single usable system — designed around how these schools actually run, not how enterprise software assumes they do.',
     challenge:
       'Private basic schools manage critical administrative processes across disconnected spreadsheets, paper records and manual systems. This creates data gaps, fee tracking errors and communication failures with parents that accumulate into real operational problems.',
     approach:
@@ -124,7 +124,7 @@ export const projects: Project[] = [
       'A web-based platform covering student management, term-based fee tracking, teacher administration, a parent portal and academic reporting.',
     role: ['Product Strategy', 'UX', 'Frontend', 'Backend', 'Database'],
     outcome:
-      'A functional school management platform in active development, replacing manual administrative processes with a structured digital system suited to the target school context.',
+      'A live school management platform replacing manual administrative processes with a structured digital system suited to the target school context.',
     technologies: [
       { name: 'Next.js', category: 'frontend' },
       { name: 'TypeScript', category: 'frontend' },
@@ -132,9 +132,9 @@ export const projects: Project[] = [
       { name: 'File-backed data', category: 'database' },
     ],
     featured: true,
-    status: 'in-development',
+    status: 'live',
     coverImage: undefined,
-    externalUrl: undefined, // Live URL to be supplied by owner
+    externalUrl: 'https://kensa-sms.vercel.app/login',
     year: 2024,
   },
 
@@ -227,7 +227,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'live',
     coverImage: undefined,
-    externalUrl: 'http://commaxhealthcare.com/',
+    externalUrl: 'https://commaxhealthcare.com/',
     year: 2023,
   },
 
@@ -286,33 +286,6 @@ export const projects: Project[] = [
     year: 2023,
   },
 
-  {
-    slug: 'kensa-sms',
-    title: 'Kensa SMS',
-    category: 'Education Technology · School Management',
-    shortDescription:
-      'A school management system providing schools with tools to manage students, staff, academics and administration from one platform.',
-    fullDescription:
-      'Kensa SMS is a school management system built to support schools in managing their day-to-day operations — from student records and academic tracking to staff management and administrative processes.',
-    challenge:
-      'Schools needed a practical, accessible management system that worked within their operational constraints and could be adopted without extensive training or infrastructure changes.',
-    approach:
-      'Built a focused, task-oriented system prioritising the workflows that school staff actually spend time on — student registration, attendance, academic records and communication.',
-    solution:
-      'A web-based school management system covering the core administrative and academic management needs of a school.',
-    role: ['Product Strategy', 'Full Stack Development', 'Deployment'],
-    outcome:
-      'A functional school management system available for school use.',
-    technologies: [
-      { name: 'Web technologies', category: 'frontend' },
-    ],
-    featured: false,
-    status: 'live',
-    coverImage: undefined,
-    externalUrl: 'https://kensa-sms.vercel.app/',
-    year: 2024,
-  },
-
 ]
 
 export const getFeaturedProjects = () =>
@@ -345,18 +318,6 @@ export const products: Product[] = [
     featured: true,
   },
   {
-    slug: 'edusankofa',
-    name: 'EduSankofa',
-    tagline: 'School management built for how schools actually work',
-    description:
-      'A school management platform designed around the operational realities of private basic schools in Ghana.',
-    category: 'Education Technology',
-    status: 'in-development',
-    coverImage: undefined,
-    externalUrl: undefined,
-    featured: true,
-  },
-  {
     slug: 'ghdata-market',
     name: 'GHData Market',
     tagline: 'Buy and sell mobile data and digital services',
@@ -371,14 +332,14 @@ export const products: Product[] = [
   {
     slug: 'kensa-sms',
     name: 'Kensa SMS',
-    tagline: 'School management, simplified',
+    tagline: 'School management built for how schools actually work',
     description:
-      'A school management system providing schools with practical tools for student, academic and administrative management.',
+      'A school management platform designed around the operational realities of private basic schools in Ghana.',
     category: 'Education Technology',
     status: 'live',
     coverImage: undefined,
-    externalUrl: 'https://kensa-sms.vercel.app/',
-    featured: false,
+    externalUrl: 'https://kensa-sms.vercel.app/login',
+    featured: true,
   },
 ]
 ```
@@ -737,7 +698,7 @@ technical complexity.
 ## 13. ADDITIONAL PROJECT NOTES
 
 ### On Commax Healthcare
-- Live URL: http://commaxhealthcare.com/
+- Live URL: https://commaxhealthcare.com/
 - Category: Client web project (not a product)
 - Do not feature on the home page selected work — include in the full `/work` index
 - The project slug `commax-healthcare` links out to the live site
@@ -759,9 +720,10 @@ technical complexity.
 - Client web project — include in `/work` index, not featured on home
 - External link available
 
-### On Reddy HMS and EduSankofa / EduIntel
+### On Reddy HMS / EduIntel
 - Owner will supply live URLs at a later date
 - Leave `externalUrl: undefined` with a comment noting the owner will provide
+- (Kensa SMS live URL was supplied: https://kensa-sms.vercel.app/login)
 
 ---
 
@@ -806,9 +768,9 @@ Items still awaiting owner input:
 ```
 ⏳ cv.pdf file — owner to supply and place at public/documents/cv.pdf
 ⏳ Project cover images — owner to supply screenshots/images
-⏳ Live URLs for Reddy HMS, EduSankofa, EduIntel — owner will provide later
+⏳ Live URLs for Reddy HMS, EduIntel — owner will provide later
 ⏳ GHData Market public-facing URL — owner to confirm
-⏳ Final domain/URL — owner to confirm (placeholder: prosperami.dev)
+✓ Final domain/URL — confirmed: prosperami.dev
 ⏳ Twitter/X handle — confirm or remove from SEO metadata
 ⏳ Phone number — owner to decide whether to display publicly (currently omitted)
 ```
