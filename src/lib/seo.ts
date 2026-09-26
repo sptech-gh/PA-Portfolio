@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://prosperami.dev'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim() || 'https://prosperami.dev'
 
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
