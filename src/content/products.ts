@@ -34,7 +34,7 @@ export const products: Product[] = [
     category: 'Commerce & Payments',
     status: 'live',
     coverImage: undefined, // TODO: Owner to supply product visual
-    externalUrl: undefined, // TODO: Owner to supply live URL when ready to link publicly
+    externalUrl: 'https://ghdata-market.vercel.app/login',
     featured: true,
   },
 ]

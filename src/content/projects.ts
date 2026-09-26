@@ -30,6 +30,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'live',
     coverImage: undefined, // TODO: Owner to supply — /images/projects/ghdata-cover.jpg
+    externalUrl: 'https://ghdata-market.vercel.app/login',
     year: 2024,
   },
 
