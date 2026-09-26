@@ -342,6 +342,18 @@ export const products: Product[] = [
     externalUrl: 'https://kensa-sms.vercel.app/login',
     featured: true,
   },
+  {
+    slug: 'reddy-hms',
+    name: 'Reddy HMS',
+    tagline: 'Hospital operations in one system',
+    description:
+      'A healthcare management platform covering patient management, billing, pharmacy, laboratory and insurance claims processes.',
+    category: 'Healthcare Technology',
+    status: 'live',
+    coverImage: undefined,
+    externalUrl: undefined, // Owner to supply live URL when ready to link publicly
+    featured: true,
+  },
 ]
 ```
 

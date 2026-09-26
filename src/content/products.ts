@@ -37,6 +37,18 @@ export const products: Product[] = [
     externalUrl: 'https://ghdata-market.vercel.app/login',
     featured: true,
   },
+  {
+    slug: 'reddy-hms',
+    name: 'Reddy HMS',
+    tagline: 'Hospital operations in one system',
+    description:
+      'A healthcare management platform covering patient management, billing, pharmacy, laboratory and insurance claims processes.',
+    category: 'Healthcare Technology',
+    status: 'live',
+    coverImage: undefined, // TODO: Owner to supply product visual
+    externalUrl: undefined, // TODO: Owner to supply live URL when ready to link publicly
+    featured: true,
+  },
 ]
 
 export const getFeaturedProducts = () => products.filter((p) => p.featured)
