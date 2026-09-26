@@ -105,6 +105,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'live',
     coverImage: undefined,
+    externalUrl: 'https://ghdata-market.vercel.app/login',
     year: 2024,
   },
 
@@ -326,7 +327,7 @@ export const products: Product[] = [
     category: 'Commerce & Payments',
     status: 'live',
     coverImage: undefined,
-    externalUrl: undefined, // Owner to supply live URL when ready to link publicly
+    externalUrl: 'https://ghdata-market.vercel.app/login',
     featured: true,
   },
   {
@@ -769,7 +770,7 @@ Items still awaiting owner input:
 ⏳ cv.pdf file — owner to supply and place at public/documents/cv.pdf
 ⏳ Project cover images — owner to supply screenshots/images
 ⏳ Live URLs for Reddy HMS, EduIntel — owner will provide later
-⏳ GHData Market public-facing URL — owner to confirm
+✓ GHData Market public-facing URL — https://ghdata-market.vercel.app/login
 ✓ Final domain/URL — confirmed: prosperami.dev
 ⏳ Twitter/X handle — confirm or remove from SEO metadata
 ⏳ Phone number — owner to decide whether to display publicly (currently omitted)
