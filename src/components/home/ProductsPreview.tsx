@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
-import { products } from '@/content/products'
+import { getFeaturedProducts } from '@/content/products'
 import { ProductCard } from '@/components/products/ProductCard'
 
 export function ProductsPreview() {
@@ -27,8 +27,8 @@ export function ProductsPreview() {
           </Link>
         </header>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {products.slice(0, 3).map((product) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2">
+          {getFeaturedProducts().slice(0, 4).map((product) => (
             <ProductCard key={product.slug} product={product} />
           ))}
         </div>

@@ -19,7 +19,9 @@ const statusLabels: Record<Product['status'], string> = {
 }
 
 export function ProductCard({ product, className }: { product: Product; className?: string }) {
-  const isEducation = product.category.toLowerCase().includes('education')
+  const category = product.category.toLowerCase()
+  const isEducation = category.includes('education')
+  const isHealthcare = category.includes('healthcare')
   const initials = product.name
     .split(/\s+/)
     .slice(0, 2)
@@ -53,7 +55,13 @@ export function ProductCard({ product, className }: { product: Product; classNam
     >
       <CoverPlaceholder
         initials={initials}
-        gradient={isEducation ? placeholderGradients.education : placeholderGradients.marketplace}
+        gradient={
+          isEducation
+            ? placeholderGradients.education
+            : isHealthcare
+              ? placeholderGradients.healthcare
+              : placeholderGradients.marketplace
+        }
         variant={isEducation ? 'bars' : 'grid'}
         className="aspect-[16/9] w-full"
       />

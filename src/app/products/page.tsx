@@ -16,7 +16,7 @@ export default function ProductsPage() {
       title="I am not only building for clients."
       lead="I am also building technology products of my own — exploring practical solutions to problems across education, commerce and business operations."
     >
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2">
         {products.map((product) => (
           <ProductCard key={product.slug} product={product} />
         ))}
