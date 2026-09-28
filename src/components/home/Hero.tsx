@@ -1,6 +1,3 @@
-'use client'
-
-import { motion, MotionConfig } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 import { SectionLabel } from '@/components/ui/SectionLabel'
 import { Button } from '@/components/ui/Button'
@@ -54,21 +51,12 @@ function Animated({
   children: React.ReactNode
   delay: number
 }) {
-  return (
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, delay, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  )
+  return <div className="animate-fade-up" style={{ animationDelay: `${delay}s` }}>{children}</div>
 }
 
 export function Hero() {
   return (
     <section aria-labelledby="hero-heading">
-      <MotionConfig reducedMotion="user">
       <Container className="grid items-center gap-14 pb-20 pt-14 md:pt-20 lg:grid-cols-[1.15fr_1fr] lg:gap-10">
         <div>
           <Animated delay={0}>
@@ -123,7 +111,6 @@ export function Hero() {
           <ProductPanel {...panels[2]} className="col-span-2 -mt-2" />
         </div>
       </Container>
-      </MotionConfig>
     </section>
   )
 }

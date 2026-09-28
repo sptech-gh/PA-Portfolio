@@ -4,7 +4,7 @@
    so var(--color-bg) etc. are available for raw CSS as well as utilities.
    --color-text-secondary and --color-text-muted are lightened slightly from
    the brief's originals to guarantee 4.5:1 body-text contrast on dark surfaces
-   (permitted by Section C). */
+   and through the hero panels' reduced opacity (permitted by Section C). */
 @theme {
   --color-bg: #0B0D0F;
   --color-surface-1: #12161A;
@@ -13,7 +13,7 @@
 
   --color-text-primary: #F5F5F0;
   --color-text-secondary: #B4BAC1;
-  --color-text-muted: #8A9199;
+  --color-text-muted: #929AA2;
 
   --color-border: #252B31;
   --color-border-subtle: #1D2329;
@@ -86,6 +86,51 @@
 @utility text-eyebrow {
   font-size: 13px;
   letter-spacing: 0.06em;
+}
+
+/* Hero entrance: staggered fade-up (Section 10), pure CSS so no animation
+   library ships to the client (Section D). */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out both;
+}
+
+/* One brief reveal for the process steps as the section scrolls into view
+   (Section 21), via scroll-driven animations — no client JS. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal-on-scroll {
+      opacity: 0;
+      animation: fade-in 0.6s ease-out both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 45%;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+  }
 }
 
 /* CV print rules (Section 24) */

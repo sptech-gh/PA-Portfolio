@@ -1,6 +1,3 @@
-'use client'
-
-import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
 
 const steps = [
@@ -36,8 +33,6 @@ const steps = [
 ]
 
 export function ProcessSteps() {
-  const reduced = useReducedMotion()
-
   return (
     <section aria-labelledby="process-heading" className="border-y border-border bg-surface-1">
       <Container className="py-20 md:py-28">
@@ -45,27 +40,19 @@ export function ProcessSteps() {
           From problem to product.
         </h2>
 
-        <MotionConfig reducedMotion="user">
-          <motion.ol
-            className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-5"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: '-100px' }}
-            transition={reduced ? { duration: 0 } : { duration: 0.6, ease: 'easeOut' }}
-          >
-            {steps.map((step) => (
-              <li key={step.n} className="flex flex-col">
-                <span className="font-heading text-5xl font-bold leading-none text-text-muted">
-                  {step.n}
-                </span>
-                <h3 className="mt-4 font-heading text-lg font-semibold text-text-primary">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-[15px] text-text-secondary">{step.description}</p>
-              </li>
-            ))}
-          </motion.ol>
-        </MotionConfig>
+        <ol className="reveal-on-scroll mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-5">
+          {steps.map((step) => (
+            <li key={step.n} className="flex flex-col">
+              <span className="font-heading text-5xl font-bold leading-none text-text-muted">
+                {step.n}
+              </span>
+              <h3 className="mt-4 font-heading text-lg font-semibold text-text-primary">
+                {step.title}
+              </h3>
+              <p className="mt-2 text-[15px] text-text-secondary">{step.description}</p>
+            </li>
+          ))}
+        </ol>
       </Container>
     </section>
   )
