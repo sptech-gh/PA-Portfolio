@@ -43,3 +43,8 @@ build.log
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated planning material
+/*_PROMPT.md
+/*_SUPPLEMENT.md
+/*_REPORT.md
